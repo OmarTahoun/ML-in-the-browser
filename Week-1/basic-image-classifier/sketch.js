@@ -28,10 +28,11 @@ function draw() {
   noLoop();
 }
 
-function fileHere(file) {
+async function fileHere(file) {
   if (file.type == 'image' && loaded) {
-    img = createImg(file.data).hide();
-    image(img, 0, 0, width, height);
+    img = createImg(file.data, () => {
+      image(img, 0, 0, width, height);
+    }).hide();
   }
   classify();
 }
