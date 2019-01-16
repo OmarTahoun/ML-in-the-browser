@@ -7,8 +7,8 @@
  ## Content:
  For each week of the course i will updating the repo with my work for that week with a description and details about each one.
 
- ### Week-1:
--  [__Simple Image Classifier__](https://github.com/OmarTahoun/ML-in-the-browser/tree/master/Week-1/basic-image-classifier).
+ ### [Week-1](https://github.com/OmarTahoun/ML-in-the-browser/tree/master/Week-1/basic-image-classifier):
+-  [__Simple Image Classifier__](https://omartahoun.github.io/ML-in-the-browser/Week-1/basic-image-classifier/)
     - an image classifier using The MobileNet model
 
 - __References__:
