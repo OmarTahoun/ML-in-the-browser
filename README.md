@@ -1,6 +1,6 @@
 # __ML-in-the-browser__
 
- ###This repo will contain my work for the [Machine Learning for the Web Course ](https://github.com/yining1023/machine-learning-for-the-web), at ITP,NYU. As well as some other notes related to the topic.
+ ### This repo will contain my work for the [Machine Learning for the Web Course ](https://github.com/yining1023/machine-learning-for-the-web), at ITP,NYU. As well as some other notes related to the topic.
 
 
 
@@ -8,9 +8,12 @@
  For each week of the course i will updating the repo with my work for that week with a description and details about each one.
 
  ### Week-1:
- -  
- -
- -
+-  __Simple Image Classifier__.
+    - an image classifier using The MobileNet model
+
+- References:
+  - [ML5.JS](https://ml5js.org/docs/getting-started)
+  - [P5.JS](https://p5js.org/)
 
  ### Week-2:
  -
