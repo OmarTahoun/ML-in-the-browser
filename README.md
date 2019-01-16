@@ -8,10 +8,10 @@
  For each week of the course i will updating the repo with my work for that week with a description and details about each one.
 
  ### Week-1:
--  __Simple Image Classifier__.
+-  [__Simple Image Classifier__](https://github.com/OmarTahoun/ML-in-the-browser/tree/master/Week-1/basic-image-classifier).
     - an image classifier using The MobileNet model
 
-- References:
+- __References__:
   - [ML5.JS](https://ml5js.org/docs/getting-started)
   - [P5.JS](https://p5js.org/)
 
