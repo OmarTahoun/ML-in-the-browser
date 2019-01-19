@@ -28,10 +28,7 @@ function gotResults(error, result){
   }else{
     var label = result;
     guess.elt.style = "color: white; font-size:23px;";
-    // probability.elt.style = "color: white; font-size:23px;";
-
     guess.elt.textContent = label;
-    // probability.elt.textContent = (results[0].probability * 100).toFixed(2)  + "%";
     classifier.classify(gotResults);
   }
 }

@@ -1,10 +1,26 @@
-let header, statment, model, canva, video, guess, probability, classA, classB, classC, train, loss, lossValue;
+let header, statment, model, canva, video, guess, classA, classB, classC, train, loss, lossValue;
 let classACounter,classBCounter, classCCounter;
 
 let loaded = false;
 var labelA = 'Rock';
 var labelB = 'Paper';
 var labelC = 'Scissors';
+
+function newLabels() {
+  labelA = prompt("What is the First label?");
+  labelB = prompt("What is the Second label?");
+  labelC = prompt("What is the Third label?");
+
+  var firstLabel = select('#labelA');
+  firstLabel.elt.textContent = labelA;
+
+  var secondLabel = select('#labelB');
+  secondLabel.elt.textContent = labelB;
+
+  var thirdLabel = select('#labelC');
+  thirdLabel.elt.textContent = labelC;
+}
+
 
 function setup() {
   canva = createCanvas(700, 600);
@@ -15,8 +31,11 @@ function setup() {
   header = select('.header');
   header.position(150, 150);
 
+  discribtion = select('.discribtion');
+  discribtion.position(header.x, header.y + header.height +20);
+
   model = select('.modelReady');
-  model.position(header.x, header.y + header.height +20);
+  model.position(discribtion.x, discribtion.y + discribtion.height +20);
 
   videoReady = select('.videoReady');
   videoReady.position(model.x, model.y + model.height +20);
@@ -31,6 +50,7 @@ function setup() {
   guess = select('#result');
   probability = select('#probability');
   lossValue = select('#lossValue');
+
 
 
 
@@ -63,6 +83,9 @@ function setup() {
     classBCounter.elt.textContent = count+1;
     });
 
+
+
+
   var thirdLabel = select('#labelC');
   thirdLabel.elt.textContent = labelC;
 
@@ -80,7 +103,12 @@ function setup() {
   train.position(classA.x,classA.y+classA.height+50);
   train.mousePressed(() => classifier.train(isTraining));
 
+  edit = select('.edit');
+  edit.position(train.x+train.width+50,train.y);
+  edit.mousePressed(newLabels);
+
   startModel();
+
 }
 
 function draw() {

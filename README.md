@@ -18,8 +18,10 @@
   - [ML5.JS](https://ml5js.org/docs/getting-started)
   - [P5.JS](https://p5js.org/)
 
- ### Week-2:
- -
+ ### [Week-2](https://github.com/OmarTahoun/ML-in-the-browser/tree/master/Week-2/Teachable%20machine):
+
+ - [__A teach-able machine__](https://omartahoun.github.io/ML-in-the-browser/Week-2/Teachable%20machine)
+    - Teach your machine to recognize  different objects and images.
  -
  -
 

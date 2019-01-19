@@ -33,7 +33,7 @@ button {
 .classC{
   background-color: red; /*Blue*/
 }
-.train{
+.train,.edit{
   background-color: black;
   padding-right:15px;
 }
