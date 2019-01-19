@@ -7,6 +7,7 @@ async function startModel() {
   model.elt.textContent = 'Model is loaded';
 
   classifier= await extractor.classification(video);
+  classifier.numClasses = 3;
   videoReady.elt.style.color = 'Green';
   videoReady.elt.textContent = 'Video is ready';
 }
