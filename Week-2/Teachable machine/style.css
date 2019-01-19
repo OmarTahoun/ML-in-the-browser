@@ -10,3 +10,38 @@ body{
 p{
   margin: 5px;
 }
+
+button {
+  border: none;
+  border:2px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px;
+  padding-right:0;
+  text-align: center;
+  text-decoration: none;
+}
+.classA{
+  background-color: #4CAF50; /* Green */
+}
+.classB{
+  background-color: #6666ff; /*Blue*/
+}
+.classC{
+  background-color: red; /*Blue*/
+}
+.train{
+  background-color: black;
+  padding-right:15px;
+}
+
+#classACounter, #classBCounter, #classCCounter{
+  padding: 0;
+  padding: 16px;
+  padding-left: 18px;
+  background-color: white;
+  color: black;
+}

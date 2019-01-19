@@ -1,5 +1,10 @@
-let header, statment, model, canva, video, guess, probability, happy, sad, train, loss, lossValue;
+let header, statment, model, canva, video, guess, probability, classA, classB, classC, train, loss, lossValue;
+let classACounter,classBCounter, classCCounter;
+
 let loaded = false;
+var labelA = 'Rock';
+var labelB = 'Paper';
+var labelC = 'Scissors';
 
 function setup() {
   canva = createCanvas(700, 600);
@@ -8,7 +13,7 @@ function setup() {
   video = createCapture(VIDEO).hide();
 
   header = select('.header');
-  header.position(20, 10);
+  header.position(150, 150);
 
   model = select('.modelReady');
   model.position(header.x, header.y + header.height +20);
@@ -27,16 +32,52 @@ function setup() {
   probability = select('#probability');
   lossValue = select('#lossValue');
 
-  happy = createButton('Happy');
-  happy.position(statment.x, statment.y+60);
-  happy.mousePressed(() => classifier.addImage('Happy'));
 
-  sad = createButton('Sad');
-  sad.position(happy.x+happy.width+40, happy.y);
-  sad.mousePressed(() => classifier.addImage('Sad'));
 
-  train = createButton('Start Training');
-  train.position(sad.x+sad.width+60, sad.y);
+  var firstLabel = select('#labelA');
+  firstLabel.elt.textContent = labelA;
+
+  classA = select('.classA');
+  classA.position(statment.x, statment.y+100);
+  classACounter = select('#classACounter');
+
+  classA.mousePressed(() => {
+    classifier.addImage(labelA);
+    var count = parseInt(classACounter.elt.textContent);
+    classACounter.elt.textContent = count+1;
+    });
+
+
+
+
+  var secondLabel = select('#labelB');
+  secondLabel.elt.textContent = labelB;
+
+  classB = select('.classB');
+  classB.position(classA.x+classA.width+80,classA.y);
+  classBCounter = select('#classBCounter');
+
+  classB.mousePressed(() => {
+    classifier.addImage(labelB);
+    var count = parseInt(classBCounter.elt.textContent);
+    classBCounter.elt.textContent = count+1;
+    });
+
+  var thirdLabel = select('#labelC');
+  thirdLabel.elt.textContent = labelC;
+
+  classC = select('.classC');
+  classC.position(classB.x+classB.width+80,classB.y);
+  classCCounter = select('#classCCounter');
+
+  classC.mousePressed(() => {
+    classifier.addImage(labelC);
+    var count = parseInt(classCCounter.elt.textContent);
+    classCCounter.elt.textContent = count+1;
+    });
+
+  train = select('.train');
+  train.position(classA.x,classA.y+classA.height+50);
   train.mousePressed(() => classifier.train(isTraining));
 
   startModel();

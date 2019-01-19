@@ -12,7 +12,6 @@
     <script src="sketch.js"></script>
   </head>
   <body>
-    <center>
       <h1 class="header">WebCam classification using MobileNet</h1>
       <h2 class="modelReady">Model is being loaded</h2>
       <h2 class="videoReady">Video is being prepared</h2>
@@ -29,6 +28,9 @@
         <span id="probability">___</span>
       </h3>
 
-    </center>
+      <button type="button" class="classA">Add <span id="labelA"> Happy </span> <span id="classACounter"> 0</span> </button>
+      <button type="button" class="classB">Add <span id="labelB"> Sad </span> <span id="classBCounter"> 0</span> </button>
+      <button type="button" class="classC">Add <span id="labelC"> Neutral </span> <span id="classCCounter"> 0</span> </button>
+      <button type="button" class="train">Start Training</button>
   </body>
 </html>

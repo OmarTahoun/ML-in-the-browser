@@ -13,6 +13,7 @@ async function startModel() {
 
 function isTraining(error) {
   if (error == null) {
+    loss.elt.style.color = 'Green';
     loss.elt.textContent = "Training is done";
     classifier.classify(gotResults);
   }else{
