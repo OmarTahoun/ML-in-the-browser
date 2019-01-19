@@ -11,6 +11,9 @@
 -  [__Simple Image Classifier__](https://omartahoun.github.io/ML-in-the-browser/Week-1/basic-image-classifier/)
     - an image classifier using The MobileNet model
 
+- [__WebCam Image classifier__](https://omartahoun.github.io/ML-in-the-browser/Week-1/Webcam%20Image%20classification/)
+  - Classify images directly from the webcam.
+
 - __References__:
   - [ML5.JS](https://ml5js.org/docs/getting-started)
   - [P5.JS](https://p5js.org/)
