@@ -1,0 +1,43 @@
+body{
+  transition: background-color 0.2s ease;
+  font-family: sans-serif;
+  color: black;
+}
+.model, .videoReady, .loss{
+  font-weight: 600;
+  color: #a81313;
+}
+p{
+  margin: 5px;
+}
+
+button {
+  border: none;
+  border:2px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px;
+  padding-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  background-color: green;
+}
+
+.slider{
+  width: 200px;
+}
+.train{
+  background-color: black;
+  padding-right:15px;
+}
+
+#imageCounter{
+  padding: 0;
+  padding: 16px;
+  padding-left: 18px;
+  background-color: white;
+  color: black;
+}

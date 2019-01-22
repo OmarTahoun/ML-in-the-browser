@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess my emotion</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+      <h1 class="header">A Teach-able machine</h1>
+      <p  class= "discribtion">Teach the machine to identify different objects or images.</p>
+      <h2 class="modelReady">Model is being loaded</h2>
+      <h2 class="videoReady">Video is being prepared</h2>
+
+
+      <h2 class="loss">Loss is:
+        <span id="lossValue"> ___ </span>
+      </h2>
+
+
+      <h3 class="statment">The model thinks this is
+        <span id="result">___</span>
+      </h3>
+
+      <button type="button" class="addExample">Add Example <span id="imageCounter"> 0</span></button>
+      <button type="button" class="train">Start Training</button>
+  </body>
+</html>
