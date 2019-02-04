@@ -3,7 +3,7 @@ body{
   font-family: sans-serif;
   color: black;
 }
-.model, .videoReady, .loss{
+.model, .videoReady{
   font-weight: 600;
   color: #a81313;
 }
@@ -33,7 +33,7 @@ button {
 .classC{
   background-color: red; /*Blue*/
 }
-.train,.edit{
+.predict, .edit{
   background-color: black;
   padding-right:15px;
 }

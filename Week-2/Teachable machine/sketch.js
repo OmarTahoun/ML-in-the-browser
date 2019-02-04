@@ -1,5 +1,6 @@
-let header, statment, model, canva, video, guess, classA, classB, classC, train, loss, lossValue;
+let header, statment, model, canva, video, guess, classA, classB, classC, data, predict;
 let classACounter,classBCounter, classCCounter;
+
 let loaded = false;
 var labelA = 'Rock';
 var labelB = 'Paper';
@@ -43,18 +44,12 @@ function setup() {
   videoReady = select('.videoReady');
   videoReady.position(model.x, model.y + model.height +20);
 
-  loss = select('.loss');
-  loss.position(videoReady.x, videoReady.y + videoReady.height +20);
-
 
   statment = select('.statment');
-  statment.position(loss.x, loss.y + loss.height +20);
+  statment.position(videoReady.x, videoReady.y + videoReady.height +20);
 
   guess = select('#result');
   probability = select('#probability');
-  lossValue = select('#lossValue');
-
-
 
 
   var firstLabel = select('#labelA');
@@ -102,12 +97,12 @@ function setup() {
     classCCounter.elt.textContent = count+1;
     });
 
-  train = select('.train');
-  train.position(classA.x,classA.y+classA.height+50);
-  train.mousePressed(() => classifier.train(isTraining));
+  predict = select('.predict');
+  predict.position(classA.x,classA.y+classA.height+50);
+  predict.mousePressed(classify);
 
   edit = select('.edit');
-  edit.position(train.x+train.width+50,train.y);
+  edit.position(predict.x+predict.width+50,predict.y);
   edit.mousePressed(newLabels);
 
   startModel();

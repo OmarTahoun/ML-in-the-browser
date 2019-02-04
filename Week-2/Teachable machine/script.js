@@ -6,30 +6,27 @@ async function startModel() {
   model.elt.style.color = 'Green';
   model.elt.textContent = 'Model is loaded';
 
-  classifier= await extractor.classification(video);
-  classifier.numClasses = 3;
+  classifier= ml5.KNNClassifier();
   videoReady.elt.style.color = 'Green';
   videoReady.elt.textContent = 'Video is ready';
 }
 
-function isTraining(error) {
-  if (error == null) {
-    loss.elt.style.color = 'Green';
-    loss.elt.textContent = "Training is done";
-    classifier.classify(gotResults);
-  }else{
-    lossValue.elt.textContent = error;
-  }
+function classify() {
+  data = extractor.infer(video);
+
+  classifier.classify(data, gotResults);
 }
 
 
-function gotResults(error, result){
+function gotResults(error, results){
   if (error) {
     console.log(error);
   }else{
-    var label = result;
-    guess.elt.style = "color: white; font-size:23px;";
-    guess.elt.textContent = label;
-    classifier.classify(gotResults);
+    var label = results[0].className.split(",")[0];
+    result.elt.style = "color: white; font-size:23px;";
+    probability.elt.style = "color: white; font-size:23px;";
+
+    result.elt.textContent = label;
+    probability.elt.textContent = (results[0].probability * 100).toFixed(2)  + "%";
   }
 }
