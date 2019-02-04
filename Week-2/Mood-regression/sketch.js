@@ -58,7 +58,12 @@ function draw() {
     background(100);
     image(video, 0, 0, width, height);
     if (value) {
-      select('body').attribute('bgColor', value*100);
+      if (value <0.4) 
+        select('body').attribute('bgColor', "#800000");
+      else if(value<0.6)
+        select('body').attribute('bgColor', "#FFFF00");
+      else
+        select('body').attribute('bgColor', "#7CFC00");
     }else{
       select('body').attribute('bgColor', '#eab126');
     }
