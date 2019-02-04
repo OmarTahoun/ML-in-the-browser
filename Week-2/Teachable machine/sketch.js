@@ -23,6 +23,15 @@ function newLabels() {
   var thirdLabel = select('#labelC');
   thirdLabel.elt.textContent = labelC;
   classCCounter.elt.textContent = 0;
+
+  guess.elt.style = "color: black; font-size:16px;";
+  probability.elt.style = "color: black; font-size:16px;";
+
+  guess.elt.textContent = "___"
+  probability.elt.textContent = "___"
+
+
+  classifier.clearAllLabels();
 }
 
 

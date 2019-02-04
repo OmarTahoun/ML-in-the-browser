@@ -12,16 +12,17 @@ async function startModel() {
 }
 
 function classify() {
-  data = extractor.infer(video);
-
-  classifier.classify(data, gotResults);
+  if (classifier.getNumLabels() > 0) {
+      data = extractor.infer(video);
+      classifier.classify(data, gotResults);
+  }
 }
 
 
 function gotResults(error, results){
   if (error) {
     console.log(error);
-  }else{
+  }else if(classifier.getNumLabels() > 0){
     var label = results.label
     var prob = results.confidencesByLabel[results.label];
 
