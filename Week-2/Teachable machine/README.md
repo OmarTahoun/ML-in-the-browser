@@ -1,4 +1,4 @@
-# A Teachable machine
+# [A Teachable machine](https://omartahoun.github.io/ML-in-the-browser/Week-2/Teachable machine/)
 
 ### Teach the machine to identify different objects and images.
 
