@@ -22,11 +22,14 @@ function gotResults(error, results){
   if (error) {
     console.log(error);
   }else{
-    var label = results[0].className.split(",")[0];
-    result.elt.style = "color: white; font-size:23px;";
+    var label = results.label
+    var prob = results.confidencesByLabel[results.label];
+
+    guess.elt.style = "color: white; font-size:23px;";
     probability.elt.style = "color: white; font-size:23px;";
 
-    result.elt.textContent = label;
-    probability.elt.textContent = (results[0].probability * 100).toFixed(2)  + "%";
+    guess.elt.textContent = label;
+    probability.elt.textContent = (prob * 100).toFixed(2)  + "%";
+    classify();
   }
 }

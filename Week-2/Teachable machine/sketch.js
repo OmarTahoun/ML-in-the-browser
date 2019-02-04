@@ -60,7 +60,8 @@ function setup() {
   classACounter = select('#classACounter');
 
   classA.mousePressed(() => {
-    classifier.addImage(labelA);
+    data = extractor.infer(video);
+    classifier.addExample(data, labelA);
     var count = parseInt(classACounter.elt.textContent);
     classACounter.elt.textContent = count+1;
     });
@@ -76,7 +77,8 @@ function setup() {
   classBCounter = select('#classBCounter');
 
   classB.mousePressed(() => {
-    classifier.addImage(labelB);
+    data = extractor.infer(video);
+    classifier.addExample(data, labelB);
     var count = parseInt(classBCounter.elt.textContent);
     classBCounter.elt.textContent = count+1;
     });
@@ -92,7 +94,8 @@ function setup() {
   classCCounter = select('#classCCounter');
 
   classC.mousePressed(() => {
-    classifier.addImage(labelC);
+    data = extractor.infer(video);
+    classifier.addExample(data, labelC);
     var count = parseInt(classCCounter.elt.textContent);
     classCCounter.elt.textContent = count+1;
     });
