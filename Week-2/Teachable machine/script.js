@@ -1,4 +1,4 @@
-let extractor,classifier, results;
+let extractor,classifier;
 
 async function startModel() {
   extractor = await ml5.featureExtractor('MobileNet');

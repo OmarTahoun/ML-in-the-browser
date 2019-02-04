@@ -1,24 +1,27 @@
 let header, statment, model, canva, video, guess, classA, classB, classC, train, loss, lossValue;
 let classACounter,classBCounter, classCCounter;
-
 let loaded = false;
 var labelA = 'Rock';
 var labelB = 'Paper';
 var labelC = 'Scissors';
 
 function newLabels() {
+
   labelA = prompt("What is the First label?");
   labelB = prompt("What is the Second label?");
   labelC = prompt("What is the Third label?");
 
   var firstLabel = select('#labelA');
   firstLabel.elt.textContent = labelA;
+  classACounter.elt.textContent = 0;
 
   var secondLabel = select('#labelB');
   secondLabel.elt.textContent = labelB;
+  classBCounter.elt.textContent = 0;
 
   var thirdLabel = select('#labelC');
   thirdLabel.elt.textContent = labelC;
+  classCCounter.elt.textContent = 0;
 }
 
 
